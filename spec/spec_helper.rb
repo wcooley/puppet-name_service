@@ -1,12 +1,14 @@
 dir = File.expand_path(File.dirname(__FILE__))
 $LOAD_PATH.unshift File.join(dir, 'lib')
 
-require 'mocha'
 require 'puppet'
+require 'mocha/api'
 require 'rspec'
-require 'spec/autorun'
 
-Spec::Runner.configure do |config|
+require 'rubygems'
+require 'puppetlabs_spec_helper/rake_tasks'
+
+RSpec.configure do |config|
     config.mock_with :mocha
 end
 
