@@ -24,6 +24,7 @@ Puppet::Type.newtype(:name_service) do
     `/etc/nsswitch.conf`.
 
     Example:
+
         name_service { ['passwd', 'group', 'shadow', 'netgroup']:
           lookup => ['files', 'ldap']
         }
