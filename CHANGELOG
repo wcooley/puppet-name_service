@@ -1,0 +1,23 @@
+2013-06-09 - Wil Cooley <wcooley@nakedape.cc>
+ * Add gitignore (c3c4083)
+
+2013-05-22 - Wil Cooley <wcooley@nakedape.cc>
+ * Add the most rudimentary of rspec tests (dc3982c)
+
+2013-05-22 - Wil Cooley <wcooley@nakedape.cc>
+ * Add just enough Rakefile to run rspec tests (956e1d8)
+
+2013-05-22 - Wil Cooley <wcooley@nakedape.cc>
+ * Add puppetlabs_spec_helper and update for current rspec/mocha (b01f667)
+
+2013-05-21 - Wil Cooley <wcooley@nakedape.cc>
+ * Fill in Modulefile (8aa03cc)
+
+2013-05-21 - Wil Cooley <wcooley@nakedape.cc>
+ * Update markdown (cb76c0e)
+
+2013-05-21 - Wil Cooley <wcooley@nakedape.cc>
+ * Add boilerplate Modulefile, spec_helper (e7fac39)
+
+2013-05-20 - Wil Cooley <wcooley@nakedape.cc>
+ * Add basic implementation, README & LICENSE (6b74f1a)
