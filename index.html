@@ -1,0 +1,102 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Puppet-name service</title>
+  <meta name="description" content="Puppet type &amp; provider to manage system name service configuration">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Puppet-name service</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Puppet type &amp; provider to manage system name service configuration</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/wcooley/puppet-name_service/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/wcooley/puppet-name_service/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/wcooley/puppet-name_service" class="code">View Puppet-name service on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="name_service" class="anchor" href="#name_service"><span class="octicon octicon-link"></span></a>name_service</h1>
+
+<p>Manages name service configuration for system databases such as
+passwd, group, etc. which on Linux and Solaris systems is in
+<code>/etc/nsswitch.conf</code>.</p>
+
+<p>Example:</p>
+
+<pre><code>name_service { ['passwd', 'group', 'shadow', 'netgroup']:
+  lookup =&gt; ['files', 'ldap']
+}
+name_service { 'hosts':
+  lookup =&gt; [ 'files', 'mdns4_minimal', '[NOTFOUND=return]', 'dns', ],
+}
+name_service { ['protocols', 'services', 'rpc', 'networks', 'ethers']:
+  lookup =&gt; 'files'
+}
+</code></pre>
+
+<h2>
+<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h2>
+
+<ul>
+<li><p><strong>ensure</strong>
+The basic property that the resource should be in.  Valid values are
+<code>present</code>, <code>absent</code>.</p></li>
+<li><p><strong>lookup</strong>
+The list of service specifications and reactions to be used for lookup.</p></li>
+<li><p><strong>name</strong>
+The name of the system database ('passwd', 'group', etc.)</p></li>
+<li><p><strong>target</strong>
+The name of the file which stores the name service configuration.</p></li>
+</ul><h2>
+<a name="providers" class="anchor" href="#providers"><span class="octicon octicon-link"></span></a>Providers</h2>
+
+<ul>
+<li>
+<strong>nsswitch</strong>
+Sun-style <code>nsswitch.conf</code>, as used in Solaris and Linux.</li>
+</ul>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/wcooley" class="avatar"><img src="https://secure.gravatar.com/avatar/d61a77bfbd592fba1635d05b96000191?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/wcooley">wcooley</a> maintains <a href="https://github.com/wcooley/puppet-name_service">Puppet-name service</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/wcooley/puppet-name_service/tarball/master" class="tar">tar</a><a href="https://github.com/wcooley/puppet-name_service/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
