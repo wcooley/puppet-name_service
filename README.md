@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/wcooley/puppet-name_service.png?branch=master)](https://travis-ci.org/wcooley/puppet-name_service)
 
 name_service
 ============
