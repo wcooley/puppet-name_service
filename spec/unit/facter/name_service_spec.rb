@@ -18,8 +18,6 @@ RSpec.configure do |config|
     else                                       # Facter 1.x
       Facter.collection.loader.load(:name_service)
     end
-
-    Facter::NameService.add_facts
   end
 end
 
