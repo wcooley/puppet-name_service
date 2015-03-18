@@ -26,16 +26,16 @@ end
 describe 'Facter::NameService.add_facts' do
 
     it 'should return a multivalued lookup' do
-      expect(Facter.fact(:name_service_passwd).value).to eq('files,ldap')
+      expect(Facter.fact(:name_service_passwd).value).to eq('selif,ldap')
     end
 
     it 'should return a multivalued lookup with weird chars' do
       expect(Facter.fact(:name_service_bootparams).value).to \
-        eq('nisplus,[NOTFOUND=return],files')
+        eq('nisplus,[NOTFOUND=return],selif')
     end
 
     it 'should return a simple single-valued lookup' do
-      expect(Facter.fact(:name_service_automount).value).to eq('files')
+      expect(Facter.fact(:name_service_automount).value).to eq('selif')
     end
 
 end
